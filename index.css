@@ -115,7 +115,8 @@
 .grid-container
 {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
     gap: 30px;
     margin: 20px;
     margin-bottom: 0px;
@@ -159,11 +160,7 @@
 }
 /* second section */
 
-.global-section1
-{
-    background-color: #c4cac6;
-    
-}
+
 .global-heading1
 {
     font-size: 30px;
@@ -185,37 +182,38 @@
 .summer-tratement-precaution
 {
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 0px;
-
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
      
 }
 .summer-precaution
 {
     padding: 20px;
-    background-color: #5db586;
-    border-radius: 70%;
+    background-color: #2fb2c9;
+    border-radius: 5%;
+    
     background-image: url(./image/nature.jpg);
 }
 /* winter */
 .Winter-tratement-precaution
 {
     display: flex;
-    justify-content: space-between;
-    gap: 50px;
-    margin: 20px 100px;
-    padding: 20px;
-    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 
      
 }
 .global-section1
 {
-    background-color: #f8c291;
+    background-color: #a1eebe;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 70px 20px;
+    text-align: center;
+    height: 300px;
 }
 .Winter-precaution
 {
@@ -240,6 +238,12 @@
 .global-section3
 {
     background-color: #f8c291;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 70px 20px;
+    text-align: center;
+    height: 300px;
     
 }
 .global-heading1
@@ -263,12 +267,9 @@
 .Monsoon-tratement-precaution
 {
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 
      
 }
@@ -284,11 +285,21 @@
     color: #3f12d3;
     text-align: center;
 }
+/* xxxx */
+
+.Monsoon-precaution a
+{
+    color: rgb(17, 18, 8);
+    text-decoration: none;
+    transition: 0.3s;
+    
+}
 
 /* food habits */
 
 .global-section4
 {
+    padding-top: 10px;
     background-color: #f3b3bd;
 }
 .global-heading
@@ -304,7 +315,8 @@
 .grid-container4
 {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
     gap: 30px;
     margin: 20px;
     margin-bottom: 0px;
@@ -361,8 +373,9 @@
 }
 form
 {
-    margin-left:590px ;
+    margin: 0 auto;
     padding: 30px;
+    width: 90%;
     
 }
 form input{
@@ -392,4 +405,29 @@ form input{
 html
 {
     scroll-behavior: smooth;
+}
+
+/* for small screen */
+@media(max-width:768px) {
+    /* #main-menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center
+
+    }; */
+    h2{
+        font-size: 20px;
+    }
+    p{
+        font-size: 15px;
+    };
+    .img
+    {
+        height: 80px;
+        width: 80px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    
 }
